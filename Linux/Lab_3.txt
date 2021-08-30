@@ -1,0 +1,42 @@
+1-hassan@ubuntu:/home$ sudo useradd -md /home/islam -c Islam-Askar islam 
+2-hassan@ubuntu:/home$ sudo useradd -md /home/baduser -c Bad-User baduser
+3-hassan@ubuntu:/etc$ sudo groupadd -g 3000 pgroup
+4-hassan@ubuntu:/etc$ sudo groupadd badgroup
+5-hassan@ubuntu:/etc$ sudo usermod -aG pgroup islam
+6-hassan@ubuntu:/etc$ sudo passwd islam
+7-hassan@ubuntu:/etc$ sudo chage -M 30 islam
+8-hassan@ubuntu:~$ sudo usermod -L baduser
+9-hassan@ubuntu:~$ sudo userdel -r  baduser
+10-hassan@ubuntu:~$ sudo groupdel badgroup
+13-hassan@ubuntu:~$ mkdir myteam
+   hassan@ubuntu:~$ chmod 474 myteam
+14-hassan@ubuntu:~$ su islam
+   islam@ubuntu:/home/hassan$ exit
+15-hassan@ubuntu:~$ cd myteam
+   bash: cd: myteam: Permission denied
+16-* 1-chmod 631 oldpasswd
+     2-chmod u=rw,g=wx,o=x oldpasswd
+   * cant make above as default premission
+   * What is the maximum permission a file can have, by default when it is just created? And what is that for directory?
+     ans: folder:666
+         directory:777
+   *umask 777
+17-* read and execute
+   * read
+   * none
+   * none
+   * read
+   * read
+   * write
+18-cant edit it but i can removve it like tht:
+   hassan@ubuntu:~$ rm new
+   rm: remove write-protected regular empty file ‘new’? yes
+19-execute (x) Execute permission on files means the right to execute them, if they are programs.For directories, 
+   execute permission allows you to enter the directory (i.e., cd into it), and to access any of its files.
+20-hassan@ubuntu:~$ sleep 100 &
+21-hassan@ubuntu:~$ kill -15 2519
+22-hassan@ubuntu:~$ ps -u  hassan
+23-hassan@ubuntu:~$ pgrep -u hassan -l -v 
+24-hassan@ubuntu:~$ pgrep -u hassan -l
+
+

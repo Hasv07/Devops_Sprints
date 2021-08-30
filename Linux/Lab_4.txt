@@ -1,0 +1,12 @@
+1-We can view the compressed archive using the -v option
+2-tar cf /etc backup
+3- -hassan@ubuntu:~$ df -i /
+   -hassan@ubuntu:~$ df -i /etc
+   -hassan@ubuntu:~$ df -i /etc/hosts
+ 
+4-hassan@ubuntu:~$ cp /etc/passwd pass_clone
+  hassan@ubuntu:~$ cmp /etc/passwd pass_clone -> no difference
+  hassan@ubuntu:~$ diff /etc/passwd pass_clone -> no difference
+
+5-hassan@ubuntu:/boot$ ln -s /etc/passwd passwd_sc
+6-hassan@ubuntu:/boot$ ln  /etc/passwd passwd_cpy,yes i can ,because i am at same partition
